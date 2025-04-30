@@ -16,7 +16,12 @@
 1. **手动安装**
     - 将 `zhangshang_aizhong` 文件夹复制到 Home Assistant 的 `custom_components` 目录下。
     - 重启 Home Assistant。
-
+2. **HACS 安装（推荐）** 
+   1. 确保你已经在 Home Assistant 中安装并配置了 HACS（Home Assistant Community Store）。
+   2. 点击 HACS 界面左上角的菜单，选择 `自定义仓库（Custom repositories）`，在弹出的窗口中输入仓库地址 `https://github.com/hlhk2017/homeassistant-unicom_bill_info`，类别选择 `集成`，然后点击 ` 
+      添加`。之后再搜索 `联通话费信息` 即可找到。
+   3. 选择 `联通话费信息` 集成，点击 `下载此存储库`。
+   4. 下载完成后，重启 Home Assistant。
 ## 配置
 ### 配置流方式（推荐）
 1. 打开 Home Assistant 的前端界面。
