@@ -4,7 +4,7 @@
     "documentation": "https://github.com/hlhk2017/Hoemassistant--zhang-shang-ai-zhong",
     "requirements": [],
     "dependencies": [],
-    "codeowners": [@hlhk2017],
+    "codeowners": ["@hlhk2017"],
     "config_flow": true,
     "version": "1.0",
     "iot_class": "cloud_polling"
