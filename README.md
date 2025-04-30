@@ -36,4 +36,4 @@
 如果你发现了任何问题或有改进的建议，欢迎提交 issue 或 pull request。
 
 ## 许可
-本项目遵循 [MIT 许可证](https://opensource.org/licenses/MIT)。
+本项目遵循 [GPL3.0 许可证]。
