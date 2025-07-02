@@ -61,14 +61,16 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     for acct_name, device_info in device_infos.items():
         hass.data[DOMAIN + f"_acct_name_{acct_name}"] = acct_name
         hass.data[DOMAIN + f"_device_info_{acct_name}"] = device_info
-        await hass.config_entries.async_forward_entry_setup(entry, "sensor")
+        # 修正的方法名及参数：将 "sensor" 放入列表中
+        await hass.config_entries.async_forward_entry_setups(entry, ["sensor"])
 
     return True
 
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """卸载配置条目。"""
-    unload_ok = await hass.config_entries.async_forward_entry_unload(entry, "sensor")
+    # 修正的方法名及参数：将 "sensor" 放入列表中
+    unload_ok = await hass.config_entries.async_forward_entry_unloads(entry, ["sensor"])
     if unload_ok:
         hass.data[DOMAIN].pop(entry.entry_id)
     return unload_ok
